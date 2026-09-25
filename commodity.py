@@ -41,8 +41,8 @@ try:
 except httpx.HTTPError as e:
     print(f'API request failed:{e}')
 
-#except ValueError:
-    #print('API did not return valid JSON record ')
+except ValueError:
+    print('API did not return valid JSON record ')
 
 except ValidationError as e:
     print('Pydantic validation failed:')
